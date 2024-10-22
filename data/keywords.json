@@ -1,0 +1,26 @@
+{
+  "page1": {
+      "keywords": [
+          { "text": "设计", "size": "24px" },
+          { "text": "艺术", "size": "18px" },
+          { "text": "创意", "size": "20px" }
+      ],
+      "color": "#fdf5e6"  
+  },
+  "page2": {
+      "keywords": [
+          { "text": "编程", "size": "24px" },
+          { "text": "技术", "size": "18px" },
+          { "text": "开发", "size": "20px" }
+      ],
+      "color": "#f0e68c"
+  },
+  "page3": {
+      "keywords": [
+          { "text": "摄影", "size": "24px" },
+          { "text": "旅行", "size": "18px" },
+          { "text": "文化", "size": "20px" }
+      ],
+      "color": "#ffe4b5"
+  }
+}
