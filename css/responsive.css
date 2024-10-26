@@ -11,9 +11,9 @@
       font-size: 18px;
   }
 
-  .card {
-      width: 95%; /* 小屏幕下卡片稍微变窄 */
-  }
+  /*.card {
+       
+  }*/
 
   .card-title {
       font-size: 20px;
@@ -37,7 +37,7 @@
   }
 
   .card {
-      width: 100%; /* 超小屏幕下卡片占满宽度 */
+      width: 99vw; /* 超小屏幕下卡片几乎占满宽度 */
   }
 
   .card-title {

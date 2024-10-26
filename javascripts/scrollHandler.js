@@ -8,8 +8,13 @@ function handleScroll() {
   const gradientOverlay = document.querySelector('.gradient-overlay');
 
   // 调整标题字体大小
-  const maxFontSize = 48;
-  const minFontSize = 24;
+  if (window.innerWidth < 768) { // 小屏幕
+    maxFontSize = 36; // 较小的最大字体
+    minFontSize = 18; // 较小的最小字体
+  } else { // 大屏幕
+    maxFontSize = 48;
+    minFontSize = 24;
+  }
   const newFontSize = Math.max(minFontSize, maxFontSize - scrollTop / 10);
   headerTitle.style.fontSize = newFontSize + 'px';
 
