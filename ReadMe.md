@@ -26,3 +26,6 @@ page的info页面默认展开 ok
 
 
 字体加载问题
+
+Live Server 本地服务器插件的测试地址：
+http://localhost:5500/page1.html
