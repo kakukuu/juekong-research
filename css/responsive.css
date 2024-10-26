@@ -10,18 +10,15 @@
   .header-signature {
       font-size: 18px;
   }
-  
-  .info-panel {
-      width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
-  }
+
   /*.card {
        
   }*/
 
   .card-title {
       font-size: 20px;
-      top: 15px;
-      left: 15px;
+      top: 5px;
+      left: 5px;
       padding: 4px 8px;
   }
 
@@ -35,6 +32,9 @@
       font-size: 24px;
   }
 
+  .info-panel {
+    width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
+}
   .header-signature {
       font-size: 16px;
   }

@@ -26,7 +26,4 @@ function handleScroll() {
       header.classList.remove('scrolled');
       mainContent.style.backgroundColor = 'transparent';
   }
-
-  // 移动渐变色罩
-  gradientOverlay.style.transform = `translateY(${scrollTop * 0.5}px)`;
 }
