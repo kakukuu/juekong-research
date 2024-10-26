@@ -18,7 +18,8 @@
 }
 
 .page-header.expanded {
-  height: fit-content; /* 增加的高度，打开 info-panel 时 */
+  /*height: fit-content;  增加的高度，打开 info-panel 时 */
+  max-height: 100vh;
 }
 
 .header-content {
