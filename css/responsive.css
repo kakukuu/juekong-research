@@ -10,7 +10,10 @@
   .header-signature {
       font-size: 18px;
   }
-
+  
+  .info-panel {
+      width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
+  }
   /*.card {
        
   }*/
@@ -37,7 +40,7 @@
   }
 
   .card {
-      width: 99vw; /* 超小屏幕下卡片几乎占满宽度 */
+      width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
   }
 
   .card-title {
