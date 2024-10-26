@@ -70,7 +70,7 @@
   top: 20px;
   right: 7vw;
   cursor: pointer;
-  
+  transition: background-image 0.3s ease; /* 平滑过渡 */
 }
 
 
