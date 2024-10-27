@@ -14,13 +14,14 @@
 
 .page-header {
   height: 32vh;
-  transition: height 0s ease 0.5s; /* 平滑过渡动画 */
+  max-height: 32vh;
+  transition: height 0s ease 0.5s; /* 平滑过渡动画,有延迟 */
 }
 
 .page-header.expanded {
   height: fit-content;  /*增加的高度，打开 info-panel 时 */
   max-height: 100vh;
-  transition: height 0.5s ease;
+  transition: height 0.5s ease 0s;/* 展开时无延迟 */
 }
 
 .header-content {
