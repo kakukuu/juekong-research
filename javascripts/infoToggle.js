@@ -16,7 +16,9 @@ function toggleInfoPanel() {
         if (infoPanel.classList.contains('open')) {
             // 关闭面板
             infoPanel.classList.remove('open');
-            header.classList.remove('expanded'); // 恢复 header 高度 （仅对page生效）
+            setTimeout(() => {
+                header.classList.remove('expanded');
+            }, 600); // 500ms 延迟
             infoIcon.src = lightIcon.src;
             headerSignature.classList.remove('open'); // 隐藏签名显示签名 (仅对index生效)
         } else {
