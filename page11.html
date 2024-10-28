@@ -22,9 +22,9 @@
           
         <div class="info-panel open" id="infoPanel">
             <div class="contact-info">
-                <p>简介：</p>
+                <p>简介：</p> 
             </div>
-            <svg width="400" height="200">
+            <svg id="svgContent" width="400" height="200">
                 <!-- 节点 1 -->
                 <circle cx="100" cy="100" r="30" fill="#3498db" />
                 <text x="100" y="100" text-anchor="middle" fill="#fff" dy=".3em">节点1</text>
@@ -35,7 +35,11 @@
             
                 <!-- 无向边 -->
                 <line x1="130" y1="100" x2="270" y2="100" stroke="#333" stroke-width="2" />
-              </svg>
+            </svg>
+            <div class="tags">
+            <span class="tag clickable" id="copyButton"><img src="assets/images/copy.png">SVG code</span>
+            </div>
+              
         </div>
         <div class="keywords-background">
             <div class="keywords">
@@ -140,5 +144,6 @@
     <script src="javascripts/scrollHandler.js"></script>
     <script src="javascripts/infoToggle.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/copySVG.js" defer></script>
 </body>
 </html>

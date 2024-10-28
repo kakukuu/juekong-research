@@ -33,6 +33,10 @@ body {
     background-attachment: fixed;
     background-position: center;
     overflow-x: hidden; /* 禁止横向滚动 */
+    -webkit-user-select: none; /* Chrome, Safari, Opera 禁止选中*/
+    -moz-user-select: none;    /* Firefox 禁止选中*/
+    -ms-user-select: none;     /* Internet Explorer/Edge 禁止选中*/
+    user-select: none;         /* Standard syntax 禁止选中*/
 }
 
 a {
