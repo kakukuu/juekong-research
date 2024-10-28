@@ -15,9 +15,17 @@
 /* 调整卡片容器样式，改为纵向排列 */
 .card-container {
   display: flex;
-  flex-direction: column; /* 卡片垂直排列 */
   gap: 30px; /* 设置卡片之间的间隙 */
   padding: 20px;
+  flex-direction: column; /* 卡片垂直排列 */
+  width: 86vw; /* 宽度只比页面宽度窄一点 */
+}
+
+.card-container.lecture {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px; /* 设置卡片之间的间隙 */
+  padding: 10px;
 }
 
 /* 卡片样式 */
@@ -38,6 +46,11 @@
   transition: 0.2s ease;
 }
 
+.card.lecture {
+  width: 150px;
+  height: 200px;
+}
+
  
 /* 卡片标题 */
 .card-title {
@@ -50,4 +63,15 @@
   text-align: left; /* 左对齐 */
   white-space: normal;
   word-wrap: break-word;
+}
+
+
+.card-title.lecture {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.card-title.lecture img {
+  width: 24px;
+  height: 24px;
 }
