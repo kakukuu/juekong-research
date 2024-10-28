@@ -52,6 +52,7 @@
   visibility: hidden;
   font-weight: bolder;
   color: #000;
+  transition: visibility 0.3s ease;
 }
 
 
