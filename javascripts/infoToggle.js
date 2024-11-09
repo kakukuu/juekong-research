@@ -20,14 +20,14 @@ function toggleInfoPanel() {
         // 1 秒后恢复可点击状态
         setTimeout(() => {
             isClickable = true;
-        }, 650);
+        }, 600);
 
         if (infoPanel.classList.contains('open')) {
             // 关闭面板
             infoPanel.classList.remove('open');
             setTimeout(() => {
                 header.classList.remove('expanded');
-            }, 600); // 600ms 延迟
+            }, 550); // 600ms 延迟
             infoIcon.src = lightIcon.src;
             headerSignature.classList.remove('open'); // 隐藏签名 (仅对index生效)
         } else {
