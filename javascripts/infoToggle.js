@@ -11,16 +11,25 @@ function toggleInfoPanel() {
     lightIcon.src = 'assets/images/info-icon-light.svg';
     const darkIcon = new Image();
     darkIcon.src = 'assets/images/info-icon-dark.svg';
+    let isClickable = true; // 用于防止连续点击
+
 
     infoIcon.addEventListener('click', function() {
+        if (!isClickable) return; // 如果不可点击则直接返回
+        isClickable = false; // 设置为不可点击
+        // 1 秒后恢复可点击状态
+        setTimeout(() => {
+            isClickable = true;
+        }, 650);
+
         if (infoPanel.classList.contains('open')) {
             // 关闭面板
             infoPanel.classList.remove('open');
             setTimeout(() => {
                 header.classList.remove('expanded');
-            }, 600); // 500ms 延迟
+            }, 600); // 600ms 延迟
             infoIcon.src = lightIcon.src;
-            headerSignature.classList.remove('open'); // 隐藏签名显示签名 (仅对index生效)
+            headerSignature.classList.remove('open'); // 隐藏签名 (仅对index生效)
         } else {
             // 打开面板
             infoPanel.classList.add('open');
@@ -28,5 +37,7 @@ function toggleInfoPanel() {
             infoIcon.src = darkIcon.src;
             headerSignature.classList.add('open'); // 显示签名 (仅对index生效)
         }
+
+        
     });
 }
