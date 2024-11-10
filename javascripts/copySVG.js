@@ -1,20 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // 获取按钮并绑定点击事件
     const copyButton = document.getElementById("copyButton");
-    const svgElement = document.getElementById("svgContent"); // 确保SVG元素存在
 
-    // 确保按钮和SVG存在后才添加事件监听
-    if (copyButton && svgElement) {
+    if (copyButton) {
         copyButton.addEventListener("click", function() {
-            const svgHTML = svgElement.outerHTML;
+            // 获取所有的 SVG 元素
+            const svgElements = document.querySelectorAll("svg");
+            let svgHTML = "";
+
+            svgElements.forEach(function(svgElement) {
+                svgHTML += svgElement.outerHTML + "\n";
+            });
 
             navigator.clipboard.writeText(svgHTML).then(() => {
-                alert("SVG code has been copied");
+                alert("所有 SVG 代码已复制");
             }).catch((err) => {
-                console.error("Copy failed:", err);
+                console.error("复制失败:", err);
             });
         });
     } else {
-        console.error("Copy button or SVG element not found");
+        console.error("未找到复制按钮");
     }
 });
