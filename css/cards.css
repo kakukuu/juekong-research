@@ -23,7 +23,7 @@
 
 .card-container.lecture {
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 10px;
 }
