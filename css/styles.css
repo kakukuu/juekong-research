@@ -64,7 +64,9 @@ a {
   
   /* 关键词样式 */
   .keywords-background .keywords {
-    position: relative;
+    position: absolute; /* 使用 absolute 定位 */
+    bottom: 0; /* 将位置固定在容器的底部 */
+    right: 0; /* 将位置固定在容器的右侧 */
     font-family: 'ExtremeBoldSongti', serif;
     font-weight: 900;
     color: #b0b0b01f;
@@ -72,13 +74,14 @@ a {
     line-height: 1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: right;
+    justify-content: flex-end; /* 右对齐子元素 */
   }
-  
+
   .keywords-background .keywords span {
     margin: 0px;
     white-space: nowrap;
   }
+
   
   svg {
     display: block;

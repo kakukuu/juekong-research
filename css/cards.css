@@ -22,7 +22,7 @@
 }
 
 .card-container.lecture {
-  flex-direction: row;
+  flex-direction: row-reverse; /* 调整卡片顺序为反向排列 */
   flex-wrap: wrap-reverse;
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 10px;
@@ -38,6 +38,22 @@
   box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.246);
   text-decoration: none;
   overflow: hidden;
+}
+
+#card-1 {
+  order: 3; /* 显示在第3顺位 */
+}
+
+#card-2 {
+  order: 1; /* 显示在第1顺位 */
+}
+
+#card-3 {
+  order: 4; /* 显示在第4顺位 */
+}
+
+#card-4 {
+  order: 2; /* 显示在第2顺位 */
 }
 
 .card:hover {
