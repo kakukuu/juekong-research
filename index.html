@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 设置文档类型为 HTML5 并定义页面语言为中文（简体） -->
+<head>
+    <meta charset="UTF-8"><!-- 定义页面的字符编码为 UTF-8，确保中文等字符正常显示 -->
+    <title>觉空</title><!-- 设置浏览器标签显示的页面标题 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 设置 viewport，获取屏幕宽度用于后续操作，使页面在移动设备上自适应 -->
+    <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml"><!-- 从文件夹引入浏览器显示的图标 favicon，使用 SVG 格式的图标 -->
+    <link rel="stylesheet" href="css/reset.css"><!-- 从文件夹引入清除默认样式的文件 -->
+    <link rel="stylesheet" href="css/styles.css"><!-- 从文件夹引入样式文件 -->
+</head>
+<body>
+    <header class="header index-header"><!-- 页眉区域，包含标题和签名 -->
+        <div class="header-content index-header-content"><!-- 页眉的文字区域 -->
+            <h1 class="header-title">觉空</h1><!-- 页面内的标题 -->
+            <p class="header-signature">— 船名地球，谁皆旅人</p><!-- 页面内的签名 -->
+            <div class="info-icon">
+                <img src="assets/images/info-icon-light.svg" alt="Info Icon" id="infoIcon">
+            </div>
+        </div>
+        <div class="info-panel" id="infoPanel"><!-- 可展开的信息面板，包含标签和联系方式 -->
+            <div class="tags">
+                <!-- 标签列表 -->
+                <span class="tag">机器学习</span>
+                <span class="tag">形式化基础理论</span>
+                <span class="tag">现象学</span>
+                <span class="tag">意识理论</span>
+                <span class="tag">知识网络可视化</span>
+          
+                <span class="tag">本科在读</span>
+                <span class="tag">慕尼黑</span>
+                <span class="tag">运动理论研究</span>
+            </div>
+            <div class="info">
+                <strong>Updates:</strong>
+                <ul id="commit-list">Getting update informations...</ul>
+                <div class="tags">
+                    <span class="tag clickable" id="copyButton"><img src="assets/images/copy.png"> more updates</span>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="copyright-notice">
+                <hr>
+                <p>© <span id="currentYear"></span> 觉空. All rights reserved.</p>
+                <p>Wechat: Ia-3-aI</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="card-container">
+            <!-- 卡片一 -->
+            <a href="page1.html" class="card">
+                <h2 class="card-title">Philosophy ＆<br>publications</h2>
+                <div class="keywords-background">
+                    <div class="keywords">
+                        <!-- 关键词列表 -->
+                        <span style="font-size: 24px;">DRL</span>
+                        <span style="font-size: 18px;">资源</span>
+                        <span style="font-size: 20px;">观察</span>
+                        <span style="font-size: 24px;">命名空间</span>
+                        <span style="font-size: 18px;">自然语言</span>
+                        <span style="font-size: 80px;">元因果</span>
+                        <span style="font-size: 138px;">逻辑</span>
+                        <!-- 更多关键词 -->
+                    </div>
+                </div>
+            </a>
+            <!-- 卡片二 -->
+            <a href="page2.html" class="card">
+                <h2 class="card-title">support ＆<br> service</h2>
+                <div class="keywords-background">
+                    <div class="keywords">
+                        <span style="font-size: 60px;">业务合作</span>
+                        <span style="font-size: 32px;">餐饮投资</span>
+                        <span style="font-size: 40px;">软件开发</span>
+                        <!-- 更多关键词 -->
+                    </div>
+                </div>
+            </a>
+            <!-- 卡片三 -->
+            <a href="page3.html" class="card">
+                <h2 class="card-title">experimental area ＆ <br>project impressions</h2>
+                <div class="keywords-background">
+                    <div class="keywords">
+                        <span style="font-size: 40px;">项目</span>
+                        <span style="font-size: 50px;">工程</span>
+                        <span style="font-size: 60px;">学习</span>
+                        <!-- 更多关键词 -->
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- 引入脚本文件 -->
+    <script src="javascripts/throttle.js"></script>
+    <script src="javascripts/scrollHandler.js"></script>
+    <script src="javascripts/infoToggle.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script src="javascripts/commitList.js"></script>
+    <script src="javascripts/copyCommitList.js"></script>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<!-- 设置文档类型为 HTML5 并定义页面语言为中文（简体） -->
+<head>
+    <meta charset="UTF-8"><!-- 定义页面的字符编码为 UTF-8，确保中文等字符正常显示 -->
+    <title>觉空</title><!-- 设置浏览器标签显示的页面标题 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- 设置 viewport，获取屏幕宽度用于后续操作，使页面在移动设备上自适应 -->
+    <link rel="icon" href="assets/images/icon.svg" type="image/svg+xml"><!-- 从文件夹引入浏览器显示的图标 favicon，使用 SVG 格式的图标 -->
+    <link rel="stylesheet" href="css/reset.css"><!-- 从文件夹引入清除默认样式的文件 -->
+    <link rel="stylesheet" href="css/styles.css"><!-- 从文件夹引入样式文件 -->
+</head>
+<body>
+    <header class="header index-header"><!-- 页眉区域，包含标题和签名 -->
+        <div class="header-content index-header-content"><!-- 页眉的文字区域 -->
+            <h1 class="header-title">空</h1><!-- 页面内的标题 -->
+            <p class="header-signature">— This address is outside the structure</p><!-- 页面内的签名 -->
+            <div class="info-icon">
+                <img src="assets/images/info-icon-light.svg" alt="Info Icon" id="infoIcon">
+            </div>
+        </div>
+        <div class="info-panel" id="infoPanel"><!-- 可展开的信息面板，包含标签和联系方式 -->
+            <div class="info">
+                <p>觀自在菩薩。行深般若波羅蜜多時。照見五蘊皆空。度一切苦厄。
+
+                    舍利子。色不異空。空不異色。色即是空。空即是色。受想行識亦復如是。
+                    
+                    舍利子。是諸法空相。不生不滅。不垢不淨。不增不減。
+                    
+                    是故空中。無色。無受想行識。無眼耳鼻舌身意。無色聲香味觸法。無眼界乃至無意識界。
+                    
+                    無無明。亦無無明盡。乃至無老死。亦無老死盡。無苦集滅道。無智亦無得。以無所得故。菩提薩埵。
+                    
+                    依般若波羅蜜多故。心無罣礙。無罣礙故。無有恐怖。遠離顛倒夢想。究竟涅盤。三世諸佛。
+                    
+                    依般若波羅蜜多故。得阿耨多羅三藐三菩提。
+                    
+                    故知般若波羅蜜多。是大神咒。是大明咒。是無上咒。是無等等咒。
+                    
+                    能除一切苦。真實不虛。故說般若波羅蜜多咒。
+                    
+                    即說咒曰。揭諦。揭諦。波羅揭諦。波羅僧揭諦。菩提薩婆訶。</p>
+            </div>
+            <div class="copyright-notice">
+                <hr>
+                <p>© <span id="currentYear"></span> 觉空. All rights reserved.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="main-content">
+        <div class="card-container">
+            <!-- 卡片一 -->
+            <a href="index.html" class="card">
+                <h2 class="card-title">觉空</h2>
+                <div class="keywords-background">
+                    <div class="keywords">
+                        <!-- 关键词列表 -->
+                        <span style="font-size: 24px;">色即是空</span>
+                        <!-- 更多关键词 -->
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- 引入脚本文件 -->
+    <script src="javascripts/throttle.js"></script>
+    <script src="javascripts/scrollHandler.js"></script>
+    <script src="javascripts/infoToggle.js"></script>
+    <script src="javascripts/main.js"></script>
+    <script>
+        document.getElementById("currentYear").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+/* cards.css and contents */
+
+
+/* 设置主内容背景 */
+.main-content {
+  padding: 20px;
+  box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.246);
+  display: flex;
+  justify-content: center; /* 居中卡片 */
+  align-items: flex-start; /* 让卡片从顶部排列 */
+  min-height: 70vh;
+}
+
+
+/* 调整卡片容器样式，改为纵向排列 */
+.card-container {
+  display: flex;
+  gap: 30px; /* 设置卡片之间的间隙 */
+  flex-direction: column; /* 卡片垂直排列 */
+  width: 86vw; /* 宽度只比页面宽度窄一点 */
+}
+
+.card-container.lecture {
+  flex-direction: row-reverse; /* 调整卡片顺序为反向排列 */
+  flex-wrap: wrap-reverse;
+  gap: 20px; /* 设置卡片之间的间隙 */
+  padding: 10px;
+}
+
+/* 卡片样式 */
+.card {
+  position: relative;
+  width: 86vw; /* 宽度只比页面宽度窄一点 */
+  margin: auto; /* ，左右居中 */
+  background-color: #ffe1a8; /* 设置卡片的背景颜色为浅黄色 */
+  border-radius: 2px; /* 为卡片添加圆角 */
+  box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.246);
+  text-decoration: none;
+  overflow: hidden;
+}
+
+#card-1 {
+  order: 3; /* 显示在第3顺位 */
+}
+
+#card-2 {
+  order: 1; /* 显示在第1顺位 */
+}
+
+#card-3 {
+  order: 4; /* 显示在第4顺位 */
+}
+
+#card-4 {
+  order: 2; /* 显示在第2顺位 */
+}
+
+.card:hover {
+  transform: scale(1.02); /* 放大卡片 */
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2); /* 增强阴影效果 */
+  transition: 0.2s ease;
+}
+
+.card.lecture {
+  width: 150px;
+  height: 200px;
+}
+
+ 
+/* 卡片标题 */
+.card-title {
+  position: relative; /* 确保标题位于背景层上方 */
+  z-index: 1; /* 使标题在背景关键词上方显示 */
+  font-family: 'BoldHeiti', sans-serif;
+  font-size: 24px;
+  margin: 20px;
+  color: #000;
+  text-align: left; /* 左对齐 */
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+
+.card-title.lecture {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.card-title.lecture img {
+  width: 24px;
+  height: 24px;
+}

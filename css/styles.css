@@ -1,0 +1,95 @@
+/* styles.css */
+
+/* 引入其他样式文件 */
+@import url('header.css');
+@import url('cards.css');
+@import url('responsive.css');
+
+/* 引入字体 */
+@font-face {
+    font-family: 'ExtremeBoldSongti';
+    src: url('assets/fonts/SourceHanSerifSC-VF.otf.woff2') format('woff2');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'BoldHeiti';
+    src: url('assets/fonts/SourceHanSansSC-VF.otf.woff2') format('woff2'); 
+    /*该字体加载有问题*/
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'RegularHeiti';
+    src: url('assets/fonts/SourceHanSansSC-VF.otf.woff2') format('woff2');
+    font-weight: lighter;
+}
+
+/* 通用样式 */
+body {
+    font-family: 'RegularHeiti', sans-serif;
+    /*background-image: url('../assets/images/background.jpg'); */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    overflow-x: hidden; /* 禁止横向滚动 */
+    -webkit-user-select: none; /* Chrome, Safari, Opera 禁止选中*/
+    -moz-user-select: none;    /* Firefox 禁止选中*/
+    -ms-user-select: none;     /* Internet Explorer/Edge 禁止选中*/
+    user-select: none;         /* Standard syntax 禁止选中*/
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* 关键词背景 */
+
+.keywords-background {
+    position: absolute; /* 使其位于卡片的背景层 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* 放置在卡片内容层下方 */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    align-items: right;
+    padding: 20px;
+    pointer-events: none; /* 禁止点击关键词区域 */
+  }
+  
+  /* 关键词样式 */
+  .keywords-background .keywords {
+    position: absolute; /* 使用 absolute 定位 */
+    bottom: 0; /* 将位置固定在容器的底部 */
+    right: 0; /* 将位置固定在容器的右侧 */
+    font-family: 'ExtremeBoldSongti', serif;
+    font-weight: 900;
+    color: #b0b0b01f;
+    text-shadow: 0 0 5px;
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end; /* 右对齐子元素 */
+  }
+
+  .keywords-background .keywords span {
+    margin: 0px;
+    white-space: nowrap;
+  }
+
+  
+  svg {
+    display: block;
+    margin: 0 auto; /* 将 SVG 居中 */
+  }
+
+  #commit-list {
+    list-style: none; /* 去掉列表前的圆点 */
+    padding: 0;       /* 去掉默认的内边距 */
+    margin: 0;        /* 去掉默认的外边距 */
+}

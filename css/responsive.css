@@ -1,0 +1,54 @@
+/* responsive.css */
+
+/* 调整响应式样式 */
+
+@media screen and (max-width: 768px) {
+  .header-title {
+      font-size: 36px;
+  }
+
+  .header-signature {
+      font-size: 18px;
+  }
+
+  /*.card {
+       
+  }*/
+
+  .card-title {
+      font-size: 20px;
+      top: 5px;
+      left: 5px;
+      padding: 4px 8px;
+  }
+
+  .card-background .keywords span {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header-title {
+      font-size: 24px;
+  }
+
+  .info-panel {
+    width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
+}
+  .header-signature {
+      font-size: 16px;
+  }
+
+  .card {
+      width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
+  }
+
+  .card-title {
+      font-size: 18px;
+      padding: 3px 6px;
+  }
+
+  .card-background .keywords span {
+      font-size: 16px;
+  }
+}
