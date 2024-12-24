@@ -17,7 +17,7 @@
   display: flex;
   gap: 30px; /* 设置卡片之间的间隙 */
   flex-direction: column; /* 卡片垂直排列 */
-  width: 86vw; /* 宽度只比页面宽度窄一点 */
+  width: 100vw; /* 宽度占满 */
 }
 
 .card-container.lecture {

@@ -36,19 +36,19 @@
     width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
 }
   .header-signature {
-      font-size: 16px;
+    font-size: 16px;
   }
 
   .card {
-      width: 98vw; /* 超小屏幕下卡片几乎占满宽度 */
+    width: 98vw; /* 宽度只比页面宽度窄一点 */
   }
 
   .card-title {
-      font-size: 18px;
-      padding: 3px 6px;
+    font-size: 18px;
+    padding: 3px 6px;
   }
 
   .card-background .keywords span {
-      font-size: 16px;
+    font-size: 16px;
   }
 }
