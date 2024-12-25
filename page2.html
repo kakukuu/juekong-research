@@ -1,76 +1,120 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<!-- 文档类型声明为 HTML5，并设置页面语言为简体中文 -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- 定义网页字符编码为 UTF-8，确保支持中文等多语言字符显示 -->
+    
     <title>support & service</title>
+    <!-- 浏览器标签上显示的网页标题 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 引入样式文件 -->
+    <!-- 设置视口宽度与设备屏幕宽度一致，使网页在移动设备上自适应 -->
+
+    <!-- 外部引用：引入清除浏览器默认样式的 CSS 文件 -->
     <link rel="stylesheet" href="css/reset.css">
+
+    <!-- 外部引用：引入自定义样式文件，定义网页布局和样式 -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body><!-- 页眉，没有infoblock -->
+
+<body>
+    <!-- 页眉部分，没有信息面板 -->
     <header class="header page-header">
         <div class="header-content page-header-content">
             <h1 class="header-title">support & service</h1>
-            <p class="subheader"><a href="index.html">觉空</a> |</p>
+            <!-- 页眉标题，显示在页面顶部 -->
+
+            <p class="subheader">
+                <a href="index.html">觉空</a> |
+                <!-- 页面导航链接，返回主页 -->
+            </p>
         </div>
     </header>
+
+    <!-- 主体内容 -->
     <main class="main-content">
         <div class="card-container">
+            <!-- 第一组卡片 -->
             <div class="card-container lecture">
-                <!-- 卡片一 -->
+                <!-- 卡片一：shearholding consulting -->
                 <a href="page22.html" class="card lecture">
-                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>shearholding<br> consulting</h2>
+                    <h2 class="card-title lecture">
+                        <img src="assets/images/pdf.png"><br>shearholding<br> consulting
+                        <!-- 外部引用：PDF 图标文件，文件位于 assets/images 文件夹中 -->
+                    </h2>
                     <div class="keywords-background">
                         <div class="keywords">
                             <span style="font-size: 48px;">2024-</span>
-                            
+                            <!-- 时间信息，强调年份 -->
                         </div>
                     </div>
                 </a>
+
+                <!-- 卡片二：supplying Chain consulting -->
                 <a href="page23.html" class="card lecture">
-                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>supplying Chain<br> consulting</h2>
+                    <h2 class="card-title lecture">
+                        <img src="assets/images/pdf.png"><br>supplying Chain<br> consulting
+                        <!-- 外部引用：重复使用的 PDF 图标 -->
+                    </h2>
                     <div class="keywords-background">
                         <div class="keywords">
                             <span style="font-size: 48px;">2024-</span>
-                            
+                            <!-- 时间信息，强调年份 -->
                         </div>
                     </div>
                 </a>
             </div>
+
             <hr>
+            <!-- 分割线，用于分隔卡片组 -->
+
+            <!-- 第二组卡片 -->
             <div class="card-container lecture">
+                <!-- 卡片三：costomized knowledge visualization -->
                 <a href="page21.html" class="card lecture">
-                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>costomized<br>knowledge visualization</h2>
+                    <h2 class="card-title lecture">
+                        <img src="assets/images/pdf.png"><br>costomized<br>knowledge visualization
+                        <!-- 外部引用：PDF 图标文件 -->
+                    </h2>
                     <div class="keywords-background">
                         <div class="keywords">
-                            <!-- 关键词列表 -->
                             <span style="font-size: 48px;">2024-</span>
-                            
+                            <!-- 时间信息，强调年份 -->
                         </div>
                     </div>
                 </a>
-            
+
+                <!-- 卡片四：individuell sport coaching -->
                 <a href="page24.html" class="card lecture">
-                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>individuell sport<br> coaching</h2>
+                    <h2 class="card-title lecture">
+                        <img src="assets/images/pdf.png"><br>individuell sport<br> coaching
+                        <!-- 外部引用：PDF 图标文件 -->
+                    </h2>
                     <div class="keywords-background">
                         <div class="keywords">
                             <span style="font-size: 48px;">Badminton</span>
+                            <!-- 关键词：羽毛球 -->
                             <span style="font-size: 35px;">Snowboard</span>
+                            <!-- 关键词：单板滑雪 -->
                         </div>
                     </div>
                 </a>
-
             </div>
         </div>
     </main>
-    
 
-    <!-- 引入脚本文件 -->
+    <!-- 外部引用的 JavaScript 文件 -->
     <script src="javascripts/throttle.js"></script>
+    <!-- 外部引用：实现函数节流功能的脚本，位于 javascripts 文件夹中 -->
     <script src="javascripts/scrollHandler.js"></script>
+    <!-- 外部引用：处理滚动事件的脚本，位于 javascripts 文件夹中 -->
     <script src="javascripts/infoToggle.js"></script>
+    <!-- 外部引用：用于控制信息面板的脚本，位于 javascripts 文件夹中 -->
     <script src="javascripts/main.js"></script>
+    <!-- 外部引用：主逻辑脚本，控制主要交互功能 -->
     <script src="javascripts/favicon.js" defer></script>
+    <!-- 外部引用：管理网页图标显示的脚本，使用 defer 优化加载顺序 -->
 </body>
 </html>
