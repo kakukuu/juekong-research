@@ -1,74 +1,195 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<!-- 声明文档类型为 HTML5，设置语言为简体中文 -->
+<!-- 文档类型声明为 HTML5，并设置页面语言为简体中文 -->
 
 <head>
     <meta charset="UTF-8">
-    <!-- 设置文档的字符编码为 UTF-8，确保支持中文字符显示 -->
-
+    <!-- 定义网页字符编码为 UTF-8，确保支持中文等多语言字符显示 -->
+    
     <title>the systematic Philosophy</title>
-    <!-- 浏览器标签上显示的页面标题 -->
+    <!-- 浏览器标签上显示的网页标题 -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 设置 viewport 宽度为设备宽度，确保页面在移动设备上自适应 -->
+    <!-- 设置视口宽度与设备屏幕宽度一致，使网页在移动设备上自适应 -->
 
-    <!-- 外部引用：重置浏览器默认样式的 CSS 文件 -->
+    <!-- 外部引用：引入清除浏览器默认样式的 CSS 文件 -->
     <link rel="stylesheet" href="css/reset.css">
 
-    <!-- 外部引用：定义页面布局和样式的自定义 CSS 文件 -->
+    <!-- 外部引用：引入自定义样式文件，定义网页布局和样式 -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <!-- 页眉 -->
+    <!-- 页眉部分 -->
     <header class="header page-header expanded">
         <div class="header-content page-header-content">
             <h1 class="header-title">the systematic Philosophy</h1>
-            <!-- 页面标题，显示在顶部 -->
+            <!-- 页眉标题，显示在页面顶部 -->
 
             <p class="subheader">
-                <!-- 导航链接 -->
                 <a href="index.html">觉空</a> | 
+                <!-- 页面导航链接，返回主页 -->
                 <a href="page1.html">Philosophy ＆ publications</a> | 
+                <!-- 页面导航链接，返回哲学与出版页面 -->
             </p>
 
             <div class="info-icon">
-                <!-- 外部引用：信息图标，文件位于 assets/images 文件夹中 -->
                 <img src="assets/images/info-icon-gray.svg" alt="Info Icon" id="infoIcon">
+                <!-- 外部引用：信息图标，文件位于 assets/images 文件夹中 -->
             </div>
         </div>
 
+
+          
         <div class="info-panel open" id="infoPanel">
-            <!-- 可展开的信息面板 -->
             <div class="info">
                 <p>以下三个部分的内容对应的结构（黄色部分）：</p> 
             </div>
 
-            <!-- SVG 图形，用于展示内容结构 -->
             <svg id="svgContent" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
-                <!-- 节点和箭头 -->
+                <!-- 节点1 -->
                 <circle cx="50" cy="100" r="30" fill="lightyellow"/>
                 <text x="50" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">理论基础包</text>
+            
+                <!-- 节点2 -->
                 <circle cx="200" cy="100" r="30" fill="lightyellow"/>
                 <text x="200" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">理论延展包</text>
+            
+                <!-- 节点3 -->
                 <circle cx="350" cy="100" r="30" fill="lightyellow"/>
                 <text x="350" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">理论拓展包</text>
+            
+                <!-- 节点4（不饱和蓝色） -->
                 <circle cx="500" cy="100" r="30" fill="lightblue"/>
                 <text x="500" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">各个外部系统</text>
+            
+                <!-- 箭头1（线条风格） -->
                 <line x1="80" y1="100" x2="170" y2="100" stroke="gray" stroke-width="2"/>
-                <!-- 其他箭头省略 -->
+                <line x1="160" y1="95" x2="170" y2="100" stroke="gray" stroke-width="2"/>
+                <line x1="160" y1="105" x2="170" y2="100" stroke="gray" stroke-width="2"/>
+            
+                <!-- 箭头2（线条风格） -->
+                <line x1="230" y1="100" x2="320" y2="100" stroke="gray" stroke-width="2"/>
+                <line x1="310" y1="95" x2="320" y2="100" stroke="gray" stroke-width="2"/>
+                <line x1="310" y1="105" x2="320" y2="100" stroke="gray" stroke-width="2"/>
+            
+                <!-- 反向箭头从节点4指向节点3（线条风格，箭头在外） -->
+                <line x1="470" y1="100" x2="380" y2="100" stroke="gray" stroke-width="2"/>
+                <line x1="390" y1="95" x2="380" y2="100" stroke="gray" stroke-width="2"/>
+                <line x1="390" y1="105" x2="380" y2="100" stroke="gray" stroke-width="2"/>
             </svg>
-
-            <div class="tags">
-                <span class="tag clickable" id="copyButton">
-                    <!-- 外部引用：SVG 复制按钮图标 -->
-                    <img src="assets/images/copy-graphic.png">SVG code
-                </span>
+            <div class="info">
+                <p>第一部分——理论基础包中的内容结构：</p> 
             </div>
+            <svg id="svgContent" width="600" height="200" xmlns="http://www.w3.org/2000/svg">
+                <!-- 节点1（圆角矩形，浅黄色） -->
+                <rect x="50" y="80" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="90" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">语言...</text>
+            
+                <!-- 节点2（圆角矩形，浅黄色） -->
+                <rect x="250" y="80" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="290" y="105" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">矛盾...</text>
+            
+                <!-- 箭头（线条风格） -->
+                <line x1="130" y1="100" x2="240" y2="100" stroke="gray"/>
+                <line x1="235" y1="95" x2="240" y2="100" stroke="gray"/>
+                <line x1="235" y1="105" x2="240" y2="100" stroke="gray"/>
+            </svg>
+            <div class="info">
+                <p>第二部分——理论延展包中的内容结构：</p> 
+            </div>
+            <svg id="svgContent" width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+                <!-- 第一列 -->
+                <!-- 节点1（圆形） -->
+                <circle cx="90" cy="180" r="30" fill="lightyellow" stroke="none"/>
+                <text x="90" y="185" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">理论基础包</text>
+            
+                <!-- 第二列 -->
+                <!-- 节点2 -->
+                <rect x="200" y="60" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="240" y="85" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">工程…</text>
+            
+                <!-- 节点3 -->
+                <rect x="200" y="160" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="240" y="185" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">冲突…</text>
+            
+                <!-- 节点4 -->
+                <rect x="200" y="260" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="240" y="285" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">规则…</text>
+            
+                <!-- 第三列 -->
+                <!-- 节点5 -->
+                <rect x="350" y="20" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="390" y="45" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">计算…</text>
+            
+                <!-- 节点6 -->
+                <rect x="350" y="120" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="390" y="145" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">调度…</text>
+            
+                <!-- 节点7 -->
+                <rect x="350" y="220" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="390" y="245" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">战争…</text>
+            
+                <!-- 节点8 -->
+                <rect x="350" y="320" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="390" y="345" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">数学…</text>
+            
+                <!-- 第四列 -->
+                <!-- 节点9（与节点3对齐） -->
+                <rect x="500" y="160" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="540" y="185" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">革命…</text>
+            
+                <!-- 节点10（与节点8对齐） -->
+                <rect x="500" y="320" width="80" height="40" rx="5" ry="5" fill="lightyellow" stroke="none"/>
+                <text x="540" y="345" font-size="12" font-weight="bold" text-anchor="middle" alignment-baseline="middle" fill="gray">统计…</text>
+            
+                <!-- 箭头1 -> 节点2 -->
+                <line x1="110" y1="170" x2="200" y2="80" stroke="gray"/>
+                <polygon points="193,78 200,80 198,87" fill="gray"/>
+            
+                <!-- 箭头1 -> 节点3 -->
+                <line x1="120" y1="180" x2="200" y2="180" stroke="gray"/>
+                <polygon points="193,175 200,180 193,185" fill="gray"/>
+            
+                <!-- 箭头1 -> 节点4 -->
+                <line x1="110" y1="190" x2="200" y2="280" stroke="gray"/>
+                <polygon points="198,273 200,280 193,278" fill="gray"/>
+            
+                <!-- 箭头2 -> 节点5 -->
+                <line x1="280" y1="80" x2="350" y2="40" stroke="gray"/>
+                <polygon points="343,38 350,40 348,47" fill="gray"/>
+            
+                <!-- 箭头3 -> 节点6 -->
+                <line x1="280" y1="180" x2="350" y2="140" stroke="gray"/>
+                <polygon points="343,138 350,140 348,147" fill="gray"/>
+            
+                <!-- 箭头3 -> 节点7 -->
+                <line x1="280" y1="180" x2="350" y2="240" stroke="gray"/>
+                <polygon points="343,238 350,240 348,233" fill="gray"/>
+            
+                <!-- 箭头4 -> 节点8 -->
+                <line x1="280" y1="280" x2="350" y2="340" stroke="gray"/>
+                <polygon points="343,338 350,340 348,333" fill="gray"/>
+            
+                <!-- 箭头6 -> 节点9 -->
+                <line x1="430" y1="140" x2="500" y2="180" stroke="gray"/>
+                <polygon points="493,178 500,180 498,187" fill="gray"/>
+            
+                <!-- 箭头7 -> 节点9 -->
+                <line x1="430" y1="240" x2="500" y2="180" stroke="gray"/>
+                <polygon points="493,182 500,180 498,173" fill="gray"/>
+            
+                <!-- 箭头8 -> 节点10 -->
+                <line x1="430" y1="340" x2="500" y2="340" stroke="gray"/>
+                <polygon points="493,335 500,340 493,345" fill="gray"/>
+            </svg>
+            
+            <div class="tags">
+            <span class="tag clickable" id="copyButton"><img src="assets/images/copy-graphic.png">SVG code</span>
+            </div>
+              
         </div>
-
         <div class="keywords-background">
-            <!-- 背景关键词，用于增强页面内容的视觉效果 -->
             <div class="keywords">
                 <span style="font-size: 50px;">摄影</span>
                 <span style="font-size: 68px;">旅行</span>
@@ -77,43 +198,163 @@
             </div>
         </div>
     </header>
-
     <main class="main-content">
         <div class="card-container">
-            <!-- PDF 卡片部分 -->
             <div class="card-container lecture">
                 <a href="data/Theory Foundation Package/language_logic_and_consciousness.pdf" target="_blank" class="card lecture" id="card-1">
-                    <h2 class="card-title lecture">
-                        <img src="assets/images/pdf.png"><br>语言、逻辑与意识.pdf
-                    </h2>
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>语言、逻辑与意识.pdf</h2>
                     <div class="keywords-background">
                         <div class="keywords">
                             <span style="font-size: 24px;">记录</span>
                             <span style="font-size: 18px;">命题</span>
-                            <!-- 其他关键词 -->
+                            <span style="font-size: 20px;">逻辑结构</span>
+                            <span style="font-size: 20px;">解释</span>
+                            <span style="font-size: 18px;">表征</span>
                         </div>
                     </div>
                 </a>
-                <!-- 其他 PDF 卡片省略 -->
+                <a href="data/Theory Foundation Package/contradiction_possession_and_dialectics.pdf" target="_blank" class="card lecture">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>矛盾，拥有与辩证.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">原因</span>
+                            <span style="font-size: 18px;">结果</span>
+                            <span style="font-size: 20px;">成分</span>
+                            <span style="font-size: 20px;">整体</span>
+                        </div>
+                    </div>
+                </a>
             </div>
             <hr> <!-- 分割线 -->
-
-            <!-- 其他卡片容器和内容省略 -->
-        </div>
+            <div class="card-container lecture">
+                <a href="data/Theory Expantion Package/engineering_and_classics.pdf" target="_blank" class="card lecture" id="card-1">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>工程与经典.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">工程</span>
+                            <span style="font-size: 18px;">经典</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/conflict_and_contradiction.pdf" target="_blank" class="card lecture" id="card-1">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>冲突与私域.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">冲突</span>
+                            <span style="font-size: 18px;">矛盾</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/revolution_and_era.pdf" target="_blank" class="card lecture">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>革命与时代.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">革命</span>
+                            <span style="font-size: 18px;">时代</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/rules_and_apriori.pdf" target="_blank" class="card lecture" id="card-1">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>规则与先验.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">规则</span>
+                            <span style="font-size: 18px;">先验</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="data/Theory Expantion Package/statistics_and_probability.pdf" target="_blank" class="card lecture">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>统计与概率.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">统计</span>
+                            <span style="font-size: 18px;">概率</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/war.pdf" target="_blank" class="card lecture" id="card-2">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>战争.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">战争</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/scheduling.pdf" target="_blank" class="card lecture" id="card-2">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>调度.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">调度</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="data/Theory Expantion Package/mathematical_construction.pdf" target="_blank" class="card lecture" id="card-2">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>数学构造.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">数学</span>
+                            <span style="font-size: 18px;">构造</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Expantion Package/computation_and_programming.pdf" target="_blank" class="card lecture" id="card-2">
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>计算与程序.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">计算</span>
+                            <span style="font-size: 18px;">程序</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <hr> <!-- 分割线 -->
+            <div class="card-container lecture">
+                <a href="data/Theory Add-on Package/Visualized Knowledge.pdf" target="_blank" class="card lecture"> 
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>图像化知识.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">图像化知识</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Add-on Package/Instincts and Emotions.pdf" target="_blank" class="card lecture"> 
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>本能与感情.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">本能与感情</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Add-on Package/Badminton.pdf" target="_blank" class="card lecture"> 
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>羽毛球.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">羽毛球</span>
+                        </div>
+                    </div>
+                </a>
+                <a href="data/Theory Add-on Package/Self and Strategy.pdf" target="_blank" class="card lecture"> 
+                    <h2 class="card-title lecture"><img src="assets/images/pdf.png"><br>自我与策略.pdf</h2>
+                    <div class="keywords-background">
+                        <div class="keywords">
+                            <span style="font-size: 24px;">自我与策略</span>
+                        </div>
+                    </div>
+                </a>                
+            </div>  
+        </div>        
     </main>
+    
 
-    <!-- 引入的外部脚本文件 -->
+    <!-- 外部引用的 JavaScript 文件 -->
     <script src="javascripts/throttle.js"></script>
-    <!-- 外部引用：实现函数节流功能的 JavaScript 文件 -->
+    <!-- 外部引用：实现函数节流功能的脚本 -->
     <script src="javascripts/scrollHandler.js"></script>
-    <!-- 外部引用：处理滚动事件的脚本 -->
     <script src="javascripts/infoToggle.js"></script>
-    <!-- 外部引用：控制信息面板显示的脚本 -->
     <script src="javascripts/main.js"></script>
-    <!-- 外部引用：主交互逻辑脚本 -->
     <script src="javascripts/copySVG.js" defer></script>
-    <!-- 外部引用：SVG 复制功能脚本，延迟加载优化 -->
     <script src="javascripts/favicon.js" defer></script>
-    <!-- 外部引用：设置和管理 favicon 的脚本 -->
 </body>
 </html>
