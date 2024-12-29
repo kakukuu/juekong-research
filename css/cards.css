@@ -19,8 +19,6 @@
   flex-direction: column; /* 卡片垂直排列 */
   width: 100vw; /* 宽度占满 */
   text-overflow: ellipsis;
-  padding-top: 5vw;
-  padding-bottom: 5vw;
 }
 
 .card-container.lecture {
@@ -28,6 +26,11 @@
   flex-wrap: wrap-reverse;
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 5vw;
+}
+
+.card-container.folder {
+  padding-top: 5vw;
+  padding-bottom: 5vw;
 }
 
 /* 卡片样式 */
