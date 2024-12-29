@@ -18,13 +18,14 @@
   gap: 30px; /* 设置卡片之间的间隙 */
   flex-direction: column; /* 卡片垂直排列 */
   width: 100vw; /* 宽度占满 */
+  text-overflow: ellipsis;
 }
 
 .card-container.lecture {
   flex-direction: row-reverse; /* 调整卡片顺序为反向排列 */
   flex-wrap: wrap-reverse;
   gap: 20px; /* 设置卡片之间的间隙 */
-  padding: 10px;
+  padding: 5vw;
 }
 
 /* 卡片样式 */
@@ -37,6 +38,7 @@
   box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.246);
   text-decoration: none;
   overflow: hidden;
+  padding: 2vw;
 }
 
 #card-1 {
@@ -64,6 +66,7 @@
 .card.lecture {
   width: 150px;
   height: 200px;
+  padding: 1vw;
 }
 
  
@@ -73,20 +76,19 @@
   z-index: 1; /* 使标题在背景关键词上方显示 */
   font-family: 'BoldHeiti', sans-serif;
   font-size: 24px;
-  margin: 20px;
   color: #000;
   text-align: left; /* 左对齐 */
-  white-space: normal;
   word-wrap: break-word;
 }
 
 
 .card-title.lecture {
   font-size: 16px;
-  margin: 10px;
 }
 
-.card-title.lecture img {
+.card-title img {
   width: 24px;
   height: 24px;
+  margin-right: 24px;
+  padding-top: 2px;
 }
