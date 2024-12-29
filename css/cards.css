@@ -46,22 +46,6 @@
   padding: 2vw;
 }
 
-#card-1 {
-  order: 3; /* 显示在第3顺位 */
-}
-
-#card-2 {
-  order: 1; /* 显示在第1顺位 */
-}
-
-#card-3 {
-  order: 4; /* 显示在第4顺位 */
-}
-
-#card-4 {
-  order: 2; /* 显示在第2顺位 */
-}
-
 .card:hover {
   transform: scale(1.02); /* 放大卡片 */
   box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2); /* 增强阴影效果 */
@@ -95,4 +79,21 @@
   width: 24px;
   height: 24px;
   margin-right: 24px;
+}
+
+
+#card-1 {
+  order: 1; /* 显示在第3顺位 */
+}
+
+#card-2 {
+  order: 2; /* 显示在第1顺位 */
+}
+
+#card-3 {
+  order: 3; /* 显示在第4顺位 */
+}
+
+#card-4 {
+  order: 4; /* 显示在第2顺位 */
 }
