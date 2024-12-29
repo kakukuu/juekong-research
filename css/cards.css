@@ -19,6 +19,8 @@
   flex-direction: column; /* 卡片垂直排列 */
   width: 100vw; /* 宽度占满 */
   text-overflow: ellipsis;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
 }
 
 .card-container.lecture {
