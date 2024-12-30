@@ -17,13 +17,20 @@
 
   .card-title {
       font-size: 20px;
-      top: 5px;
-      left: 5px;
-      padding: 4px 8px;
+      margin: 5px;
   }
 
   .card-background .keywords span {
       font-size: 18px;
+  }
+
+  .card-container.lecture {
+    padding: 1vw;
+  }
+  
+  .card-container.folder {
+    padding-top: 2vw;
+    padding-bottom: 2vw;
   }
 }
 
@@ -45,7 +52,7 @@
 
   .card-title {
     font-size: 18px;
-    padding: 3px 6px;
+    margin: 3px;
   }
 
   .card-background .keywords span {
