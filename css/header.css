@@ -69,6 +69,7 @@
 
 .info-icon {
   position: absolute;
+  opacity: 80%;
   top: 20px;
   right: 7vw;
   cursor: pointer;

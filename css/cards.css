@@ -65,7 +65,7 @@
   z-index: 1; /* 使标题在背景关键词上方显示 */
   font-family: 'BoldHeiti', sans-serif;
   font-size: 24px;
-  color: #000;
+  color: #363636;
   text-align: left; /* 左对齐 */
   word-wrap: break-word;
 }
@@ -80,6 +80,7 @@
   height: 24px;
   margin-right: 24px;
   margin-bottom: -5px;
+  opacity: 80%;
 }
 
 
@@ -97,4 +98,59 @@
 
 #card-4 {
   order: 4; /* 显示在第2顺位 */
+}
+
+/* for test */
+
+
+/* 灰色背景层（点击后关闭卡片） */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5; /* 新增 z-index */
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* 触发展开时显示背景 */
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.card.lecture.stack {
+  background-color: rgba(190, 190, 190, 0.485); /* 半透明白色背景 */
+  padding: 0;
+  cursor: pointer;
+}
+
+.card.lecture.subcard { 
+  /* 在html始终处于stack中 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 95%;
+  height: 95%;
+  transition: all 0.5s ease;
+}
+
+.card.lecture.subcard:nth-child(1) { transform: translateX(5%) translateY(5%) rotate(0deg); }
+.card.lecture.subcard:nth-child(2) { transform: translateX(0%) translateY(0%) rotate(0deg); }
+.card.lecture.subcard:nth-child(3) { transform: translateX(0%) translateY(0%) rotate(0deg); }
+.card.lecture.subcard:nth-child(4) { transform: translateX(0%) translateY(0%) rotate(0deg); }
+.card.lecture.subcard:nth-child(5) { transform: translateX(0%) translateY(0%) rotate(0deg); }
+
+.card.lecture.subcard.active {
+  position: fixed;
+  width: 150px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  pointer-events: auto;
 }
