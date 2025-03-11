@@ -103,40 +103,23 @@
 /* for test */
 
 
-/* 灰色背景层（点击后关闭卡片） */
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5; /* 新增 z-index */
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-/* 触发展开时显示背景 */
-.overlay.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
 .card.lecture.stack {
+  /*已有的：position: relative;
+  width: 150px;
+  height: 200px;
+  cursor: pointer;*/
   background-color: rgba(190, 190, 190, 0.485); /* 半透明白色背景 */
   padding: 0;
-  cursor: pointer;
+  transition: background-color 2s ease;
 }
 
 .card.lecture.subcard { 
-  /* 在html始终处于stack中 */
+  /* subcard在html始终处于stack中 */
   position: absolute;
   top: 0;
   left: 0;
   width: 95%;
   height: 95%;
-  transition: all 0.5s ease;
 }
 
 .card.lecture.subcard:nth-child(1) { transform: translateX(5%) translateY(5%) rotate(0deg); }
@@ -145,12 +128,46 @@
 .card.lecture.subcard:nth-child(4) { transform: translateX(0%) translateY(0%) rotate(0deg); }
 .card.lecture.subcard:nth-child(5) { transform: translateX(0%) translateY(0%) rotate(0deg); }
 
-.card.lecture.subcard.active {
-  position: fixed;
+.card.lecture.stack.active {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100vw; /* 视口宽度 */
+  height: 100vh; /* 视口高度 */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  z-index: 5;
+  pointer-events: auto; /* 卡片可点击 */
+}
+
+.card.lecture.stack.active ~ * {
+  pointer-events: none; /* 禁止后面所有元素的点击 */
+}
+
+/* 让 stack.active 禁止自身 hover 放大 */
+.card.lecture.stack.active:hover {
+  transform: none;
+}
+
+
+.card.lecture.stack.active .card.lecture.subcard {
+  position: static; /* 让flex自动布局 */
   width: 150px;
   height: 200px;
-  top: 50%;
-  left: 50%;
+  transform: none;
+  margin: 10px; /* 调整卡片之间的间距 */
+  pointer-events: auto; /* 卡片可点击 */
   z-index: 10;
-  pointer-events: auto;
+}
+
+/* 让 stack.active 中的subcard允许 hover 放大 */
+
+.card.lecture.stack.active .card.lecture.subcard:hover {
+  transform: scale(1.02); /* 放大卡片 */
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.2); /* 增强阴影效果 */
+  transition: 0.2s ease;
 }

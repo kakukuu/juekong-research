@@ -39,6 +39,11 @@ body {
     user-select: none;         /* Standard syntax 禁止选中*/
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh; /* 防止页面有额外的高度 */
+}
+
 a {
     text-decoration: none;
     color: inherit;
