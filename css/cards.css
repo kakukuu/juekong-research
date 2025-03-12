@@ -1,4 +1,4 @@
-/* cards.css and contents */
+/* cards.css and contents z-index: .main-content：0；card:1; stack: 0; stack-open:6-7;*/
 
 
 /* 设置主内容背景 */
@@ -9,6 +9,7 @@
   justify-content: center; /* 居中卡片 */
   align-items: flex-start; /* 让卡片从顶部排列 */
   min-height: 70vh;
+  z-index: 0;
 }
 
 
@@ -111,6 +112,7 @@
   background-color: rgba(190, 190, 190, 0.485); /* 半透明白色背景 */
   padding: 0;
   transition: background-color 2s ease;
+  z-index: 0; /* 放置在所有内容的下方，作为body背景的一部分 */
 }
 
 .card.lecture.subcard { 
@@ -140,7 +142,7 @@
   gap: 20px;
   justify-content: center;
   align-content: center;
-  z-index: 5;
+  z-index: 6; /* 放置在所有内容的上方 */
   pointer-events: auto; /* 卡片可点击 */
 }
 
@@ -161,7 +163,7 @@
   transform: none;
   margin: 10px; /* 调整卡片之间的间距 */
   pointer-events: auto; /* 卡片可点击 */
-  z-index: 10;
+  z-index: 7;
 }
 
 /* 让 stack.active 中的subcard允许 hover 放大 */
