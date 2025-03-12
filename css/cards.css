@@ -1,10 +1,10 @@
-/* cards.css and contents z-index: .main-content：0；card:1; stack: 0; stack-open:6-7;*/
+/* cards.css and contents z-index: .main-content：0；card:1(like header); stack: 0; stack-open:6-7;*/
 
 
 /* 设置主内容背景 */
 .main-content {
   padding-top: 20px;
-  box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.246);
+  box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.25);
   display: flex;
   justify-content: center; /* 居中卡片 */
   align-items: flex-start; /* 让卡片从顶部排列 */
@@ -45,6 +45,7 @@
   text-decoration: none;
   overflow: hidden;
   padding: 2vw;
+  z-index: 1;
 }
 
 .card:hover {
@@ -63,7 +64,7 @@
 /* 卡片标题 */
 .card-title {
   position: relative; /* 确保标题位于背景层上方 */
-  z-index: 1; /* 使标题在背景关键词上方显示 */
+  z-index: 3; /* 使标题在背景关键词上方显示 */
   font-family: 'BoldHeiti', sans-serif;
   font-size: 24px;
   color: #363636;
@@ -120,15 +121,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 95%;
-  height: 95%;
+  width: 90%;
+  height: 90%;
 }
 
-.card.lecture.subcard:nth-child(1) { transform: translateX(5%) translateY(5%) rotate(0deg); }
-.card.lecture.subcard:nth-child(2) { transform: translateX(0%) translateY(0%) rotate(0deg); }
-.card.lecture.subcard:nth-child(3) { transform: translateX(0%) translateY(0%) rotate(0deg); }
-.card.lecture.subcard:nth-child(4) { transform: translateX(0%) translateY(0%) rotate(0deg); }
-.card.lecture.subcard:nth-child(5) { transform: translateX(0%) translateY(0%) rotate(0deg); }
+.card.lecture.subcard:nth-child(1) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(2) { transform: translateX(0%) translateY(0%); }
+.card.lecture.subcard:nth-child(3) { transform: translateX(0%) translateY(0%); }
+.card.lecture.subcard:nth-child(4) { transform: translateX(0%) translateY(0%); }
+.card.lecture.subcard:nth-child(5) { transform: translateX(0%) translateY(0%); }
 
 .card.lecture.stack.active {
   background: rgba(0, 0, 0, 0.5);
