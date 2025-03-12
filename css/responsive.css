@@ -11,10 +11,6 @@
       font-size: 18px;
   }
 
-  /*.card {
-       
-  }*/
-
   .card-title {
       font-size: 20px;
       margin: 5px;
@@ -57,5 +53,19 @@
 
   .card-background .keywords span {
     font-size: 16px;
+  }
+}
+
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: rgb(75, 75, 75);
+  }
+  .header {
+    background: rgba(150, 150, 140); 
+  }
+  
+  .card {
+    background-color: rgb(150, 150, 140);
   }
 }

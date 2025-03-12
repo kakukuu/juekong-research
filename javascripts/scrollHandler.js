@@ -40,13 +40,4 @@ function handleScroll() {
   // 将计算后的字体大小应用到标题元素
   headerTitle.style.fontSize = newFontSize + 'px';
 
-  // 调整页眉的背景颜色
-  // 当滚动距离大于 100 像素时，改变页眉样式以增强视觉效果
-  if (scrollTop > 100) {
-    header.classList.add('scrolled'); // 添加样式类 `scrolled`，此类需在 CSS 文件中定义
-    mainContent.style.backgroundColor = '#f0f0f0'; // 设置主内容区域的背景颜色
-  } else {
-    header.classList.remove('scrolled'); // 移除样式类 `scrolled`
-    mainContent.style.backgroundColor = 'transparent'; // 恢复主内容区域的透明背景
-  }
 }
