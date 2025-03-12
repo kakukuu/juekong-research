@@ -75,12 +75,10 @@
   transition: background-image 0.3s ease; /* 平滑过渡 */
 }
 
-
 .info-icon img {
   width: 2vh;
   height: 2vh;
 }
-
 
 .info-panel {
   position: sticky; /* 改为固定定位，始终显示在视口内 */
@@ -139,8 +137,6 @@
   border: 1px solid #8484845a;
   border-radius: 2px;
 }
-
-
 
 .tag.clickable:hover{
   background-color: #8484845a;
