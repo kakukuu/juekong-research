@@ -117,7 +117,7 @@
   cursor: pointer;*/
   background-color: rgba(190, 190, 190, 0.485); /* 半透明白色背景 */
   padding: 0;
-  transition: background-color 2s ease;
+  transition: background-color 1.5s ease;
   z-index: 0; /* 放置在所有内容的下方，作为body背景的一部分 */
 }
 

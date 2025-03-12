@@ -7,17 +7,27 @@ Keywords: 2;*/
 @import url('header.css');
 @import url('cards.css');
 
-/* 引入字体 */
+/* 引入字体，暂时使用cdn，可切换回assets/fonts的字体*/
+/* 引入思源黑体（Source Han Sans SC） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;500;700;900&display=swap');
+
+/* 引入思源宋体（Source Han Serif SC） */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@200;400;700;900&display=swap');
+
 @font-face {
-    font-family: 'ExtremeBoldSongti';
-    src: url('../assets/fonts/SourceHanSerifSC-VF.otf.woff2') format('woff2-variations');
-    font-weight: normal;
+  font-family: 'ExtremeBoldSongti';
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: local('Source Han Serif SC'), local('Noto Serif SC');
 }
 
 @font-face {
-    font-family: 'RegularHeiti';
-    src: url('../assets/fonts/SourceHanSansSC-VF.otf.woff2') format('woff2-variations');
-    font-weight: lighter;
+  font-family: 'RegularHeiti';
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+  src: local('Source Han Sans SC'), local('Noto Sans SC');
 }
 
 /* 全局样式和背景 */
