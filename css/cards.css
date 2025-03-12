@@ -1,4 +1,9 @@
-/* cards.css and contents z-index: .main-content：0；card:1(like header); stack: 0; stack-open:6-7;*/
+/* cards.css and contents*/
+/* z-index:
+ main-content：0；
+ card:1(like header); 
+ stack: 0; 
+ stack-open:6-7;*/
 
 
 /* 设置主内容背景 */
@@ -19,12 +24,12 @@
   gap: 30px; /* 设置卡片之间的间隙 */
   flex-direction: column; /* 卡片垂直排列 */
   width: 100vw; /* 宽度占满 */
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /* 文本溢出显示省略号 */
 }
 
 .card-container.lecture {
-  flex-direction: row-reverse; /* 调整卡片顺序为反向排列 */
-  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse; /* 调整卡片顺序为水平，按照反向排列 */
+  flex-wrap: wrap-reverse; /* 换行 */
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 5vw;
 }
@@ -125,11 +130,13 @@
   height: 90%;
 }
 
-.card.lecture.subcard:nth-child(1) { transform: translateX(10%) translateY(10%); }
-.card.lecture.subcard:nth-child(2) { transform: translateX(0%) translateY(0%); }
-.card.lecture.subcard:nth-child(3) { transform: translateX(0%) translateY(0%); }
-.card.lecture.subcard:nth-child(4) { transform: translateX(0%) translateY(0%); }
-.card.lecture.subcard:nth-child(5) { transform: translateX(0%) translateY(0%); }
+.card.lecture.subcard:nth-child(1) { transform: translateX(0%) translateY(0%); }
+.card.lecture.subcard:nth-child(2) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(3) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(4) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(5) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(6) { transform: translateX(10%) translateY(10%); }
+.card.lecture.subcard:nth-child(7) { transform: translateX(10%) translateY(10%); }
 
 .card.lecture.stack.active {
   background: rgba(0, 0, 0, 0.5);
@@ -145,6 +152,8 @@
   align-content: center;
   z-index: 6; /* 放置在所有内容的上方 */
   pointer-events: auto; /* 卡片可点击 */
+  gap: 20px; /* 设置卡片之间的间隙 (和container一样)*/
+  padding: 5vw;
 }
 
 .card.lecture.stack.active ~ * {
@@ -162,7 +171,6 @@
   width: 150px;
   height: 200px;
   transform: none;
-  margin: 10px; /* 调整卡片之间的间距 */
   pointer-events: auto; /* 卡片可点击 */
   z-index: 7;
 }

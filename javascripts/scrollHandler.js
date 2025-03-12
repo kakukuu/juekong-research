@@ -5,7 +5,7 @@
  * 此函数需要在页面加载时绑定到 `window.onscroll` 事件。
  * 外部引用：
  * 1. `document.querySelector` 选择页面上的特定 HTML 元素。
- * 2. 样式类 `.header`、`.header-title`、`.main-content` 需要在 CSS 文件中定义。
+ * 2. 样式类 `.header`、`.header-title`、`.main-content` 在 CSS 文件中定义。
  */
 
 function handleScroll() {

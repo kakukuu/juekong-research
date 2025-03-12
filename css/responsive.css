@@ -1,7 +1,7 @@
 /* responsive.css */
-
 /* 调整响应式样式 */
 
+/* 小屏幕下的样式 */
 @media screen and (max-width: 768px) {
   .header-title {
       font-size: 36px;
@@ -23,13 +23,19 @@
   .card-container.lecture {
     padding: 1vw;
   }
+
+  .card.lecture.stack.active {
+    padding: 1vw;
+  }
   
   .card-container.folder {
     padding-top: 2vw;
     padding-bottom: 2vw;
   }
+
 }
 
+/* 超小屏幕下的样式 */
 @media screen and (max-width: 480px) {
   .header-title {
       font-size: 24px;
@@ -56,7 +62,7 @@
   }
 }
 
-
+/* 暗黑模式下的样式 */
 @media (prefers-color-scheme: dark) {
   body {
     background-color: rgb(75, 75, 75);
@@ -65,7 +71,7 @@
     background: rgba(150, 150, 140); 
   }
   .info-panel {
-    background-color: rgba(190, 190, 180, 0.5); /* 暖白色背景 */
+    background-color: rgba(190, 190, 180, 0.5); 
   }
   .card {
     background-color: rgb(150, 150, 140);
