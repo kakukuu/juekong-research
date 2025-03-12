@@ -64,7 +64,9 @@
   .header {
     background: rgba(150, 150, 140); 
   }
-  
+  .info-panel {
+    background-color: rgba(190, 190, 180, 0.5); /* 暖白色背景 */
+  }
   .card {
     background-color: rgb(150, 150, 140);
   }

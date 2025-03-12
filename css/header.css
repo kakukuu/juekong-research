@@ -42,7 +42,7 @@
   font-family: 'ExtremeBoldSongti', serif;
   font-size: 48px;
   font-weight: 900;
-  color: #363636;
+  color: rgb(54, 54, 54);
   margin-bottom: 10px;
   padding-right: 20vw;
 }
@@ -52,7 +52,7 @@
   font-size: 20px;
   visibility: hidden;
   font-weight: bolder;
-  color: #363636;
+  color: rgb(54, 54, 54);
   transition: visibility 0.3s ease;
 }
 
@@ -94,7 +94,7 @@
   max-height: 0vh; /* 初始最大高度为5，用于动画 */
   min-height: 0vh;
   overflow-y: scroll; /* 增加垂直滚动条 */
-  background-color: rgba(190, 190, 180, 0.485); /* 半透明白色背景 */
+  background-color: rgba(190, 190, 190, 0.5); /* 半透明白色背景 */
   border-radius: 2px; /* 圆角设置为2px */
   transition: max-height 0.5s ease, min-height 0.5s ease; /* 平滑过渡动画 */
   opacity: 70%;
@@ -120,7 +120,7 @@
 }
 
 .tag {
-  background-color: #c4c4c45a;
+  background-color: rgba(196, 196, 196, 0.35);
   border-radius: 2px;
   padding: 5px 10px;
   margin: 5px;
@@ -134,13 +134,13 @@
 }
 
 .tag.clickable {
-  background-color: #f0f0f000;
-  border: 1px solid #8484845a;
+  background-color: rgba(240, 240, 240, 0);
+  border: 1px solid rgba(132, 132, 132, 0.35);
   border-radius: 2px;
 }
 
 .tag.clickable:hover{
-  background-color: #8484845a;
+  background-color: rgba(132, 132, 132, 0.35);
   transition: background-color 0.3s ease;
 }
 
