@@ -28,7 +28,7 @@
 }
 
 .card-container.lecture {
-  flex-direction: row-reverse; /* 调整卡片顺序为水平，按照反向排列 */
+  flex-direction: row; /* 调整卡片顺序为水平，按照反向排列 */
   flex-wrap: wrap-reverse; /* 换行 */
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 5vw;
