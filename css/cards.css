@@ -69,7 +69,7 @@
 /* 卡片标题 */
 .card-title {
   position: relative; /* 确保标题位于背景层上方 */
-  z-index: 3; /* 使标题在背景关键词上方显示 */
+  z-index: 3;
   font-family: 'BoldHeiti', sans-serif;
   font-size: 24px;
   color: #363636;
