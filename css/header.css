@@ -102,6 +102,7 @@
   border-radius: 2px; /* 圆角设置为2px */
   transition: max-height 0.5s ease, min-height 0.5s ease; /* 平滑过渡动画 */
   opacity: 70%;
+  z-index: 3;
 }
 
 .info-panel.open {
