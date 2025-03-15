@@ -75,11 +75,17 @@
   color: #363636;
   text-align: left; /* 左对齐 */
   word-wrap: break-word;
+  display: -webkit-box; /* 设置多行文本显示 */
+  -webkit-box-orient: vertical;  /* 设置文本垂直排列 */
+  -webkit-line-clamp: 2; /* 设置最大行数 */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 文本溢出显示省略号 */
 }
 
 .card-title.lecture {
   font-size: 16px;
   line-height: 1.5em;
+  -webkit-line-clamp: 6; /* 设置最大行数 */
 }
 
 .card-title img {
@@ -128,6 +134,7 @@
   left: 0;
   width: 90%;
   height: 90%;
+  padding: 0.7vw; /* 设置，减少内边距 */
 }
 
 .card.lecture.subcard:nth-child(1) { transform: translateX(0%) translateY(0%); }
@@ -153,7 +160,7 @@
   z-index: 6; /* 放置在所有内容的上方 */
   pointer-events: auto; /* 卡片可点击 */
   gap: 20px; /* 设置卡片之间的间隙 (和container一样)*/
-  padding: 5vw;
+  padding: 5vw; 
 }
 
 .card.lecture.stack.active ~ * {
@@ -173,6 +180,7 @@
   transform: none;
   pointer-events: auto; /* 卡片可点击 */
   z-index: 7;
+  padding: 1vw; /* 设置，恢复内边距 */
 }
 
 /* 让 stack.active 中的subcard允许 hover 放大 */
