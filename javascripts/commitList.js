@@ -20,12 +20,7 @@ const commitCount = 2; // 要获取的提交记录数量
 const apiUrl = `https://api.github.com/repos/${username}/${repo}/commits`;
 
 // 调用 GitHub API 获取提交记录
-fetch(apiUrl
-    /*, {
-    headers: {
-        Authorization: `Bearer ${key}` // 使用身份验证（如果需要）
-    }
-} */)
+fetch(apiUrl)
     .then(response => {
         // 检查响应是否成功
         if (!response.ok) {
@@ -37,17 +32,17 @@ fetch(apiUrl
         const commitList = document.getElementById("commit-list"); // 获取页面中展示提交记录的元素
         commitList.innerHTML = ""; // 清空加载中的占位内容
 
+        // 在所有项前添加一个列表项
+        const headerItem = document.createElement("li");
+        headerItem.textContent = "……";
+        commitList.appendChild(headerItem);
+
         // 获取最近 n 条提交记录
         commits.slice(0, commitCount).forEach(commit => {
             const commitUrl = commit.url; // 每条提交的详情 URL
 
             // 获取提交详情
-            fetch(commitUrl
-                /*, {
-                headers: {
-                    Authorization: `Bearer ${key}` // 使用身份验证（如果需要）
-                }
-            } */)
+            fetch(commitUrl)
                 .then(response => response.json())
                 .then(commitDetails => {
                     const listItem = document.createElement("li"); // 创建列表项
