@@ -43,25 +43,10 @@
   font-size: 48px;
   font-weight: 900;
   color: rgb(54, 54, 54);
-  margin-bottom: 10px;
-  padding-right: 20vw;
+  padding-right: 10vw; /* 使标题不会被 info-icon 遮挡 */
   white-space: nowrap; /* 不换行 */
-  overflow: hidden; /* 仅一行，隐藏溢出文本 */
+  overflow: hidden; /* 隐藏溢出文本 */
   text-overflow: ellipsis; /* 溢出文本显示省略号 */
-}
-
-.header-signature {
-  font-family: 'ExtremeBoldSongti', serif;
-  font-size: 20px;
-  visibility: hidden;
-  font-weight: bolder;
-  color: rgb(54, 54, 54);
-  transition: visibility 0.3s ease;
-  margin-bottom: 10vh;
-}
-
-.header-signature.open {
-  visibility: visible;
 }
 
 .subheader {
@@ -70,12 +55,23 @@
   font-weight: bolder;
   color: #363636;
   margin-bottom: 10vh;
+  padding-right: 10vw; /* 使副标题标题不会被 info-icon 遮挡 */
 }
+
+.subheader.signature {
+  visibility: hidden;
+  transition: visibility 0.3s ease;
+}
+
+.subheader.signature.open {
+  visibility: visible;
+}
+
 
 .info-icon {
   position: absolute;
   opacity: 80%;
-  top: 20px;
+  top: 8px;
   right: 7vw;
   cursor: pointer;
   transition: background-image 0.3s ease; /* 平滑过渡 */
@@ -95,7 +91,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 87%; /* 宽度为页面的95% */
-  max-height: 0vh; /* 初始最大高度为 0，用于动画 */
+  max-height: 0vh; /* 初始最大高度为0，用于动画 */
   min-height: 0vh;
   overflow-y: scroll; /* 增加垂直滚动条 */
   background-color: rgba(190, 190, 190, 0.5); /* 半透明白色背景 */

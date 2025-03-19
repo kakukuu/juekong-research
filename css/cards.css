@@ -24,7 +24,6 @@
   gap: 30px; /* 设置卡片之间的间隙 */
   flex-direction: column; /* 卡片垂直排列 */
   width: 100vw; /* 宽度占满 */
-  text-overflow: ellipsis; /* 文本溢出显示省略号 */
 }
 
 .card-container.lecture {
@@ -51,6 +50,8 @@
   overflow: hidden;
   padding: 2vw;
   z-index: 1;
+  overflow: hidden;
+  text-overflow: ellipsis; /* 文本溢出显示省略号 */
 }
 
 .card:hover {
@@ -134,7 +135,7 @@
   left: 0;
   width: 90%;
   height: 90%;
-  padding: 0.7vw; /* 设置，减少内边距 */
+  padding: 0.7vw; /* 减小padding，适应卡片的缩小 */
 }
 
 .card.lecture.subcard:nth-child(1) { transform: translateX(0%) translateY(0%); }
@@ -151,7 +152,7 @@
   top: 0;
   left: 0;
   width: 100vw; /* 视口宽度 */
-  height: 100vh; /* 视口高度 */
+  min-height: 100vh; /* 最小视口高度 */
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -160,7 +161,8 @@
   z-index: 6; /* 放置在所有内容的上方 */
   pointer-events: auto; /* 卡片可点击 */
   gap: 20px; /* 设置卡片之间的间隙 (和container一样)*/
-  padding: 5vw; 
+  padding: 5vw;
+  overflow-y: scroll; /* 增加垂直滚动条 */
 }
 
 .card.lecture.stack.active ~ * {
@@ -179,10 +181,9 @@
   height: 200px;
   transform: none;
   pointer-events: auto; /* 卡片可点击 */
+  padding: 1vw; /* 恢复原有的padding */
   z-index: 7;
-  padding: 1vw; /* 设置，恢复内边距 */
 }
-
 /* 让 stack.active 中的subcard允许 hover 放大 */
 
 .card.lecture.stack.active .card.lecture.subcard:hover {

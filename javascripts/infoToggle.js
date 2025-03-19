@@ -5,7 +5,7 @@ function toggleInfoPanel() {
     const infoIcon = document.getElementById('infoIcon');
     const infoPanel = document.getElementById('infoPanel');
     const header = document.querySelector('.header');
-    const headerSignature = document.querySelector('.header-signature'); // 选择签名元素(仅对index生效)
+    const headerSignature = document.querySelector('.subheader.signature'); // 选择签名元素(仅对index生效)
     const lightIcon = new Image();
     lightIcon.src = 'assets/images/info-icon-light.svg';
     const darkIcon = new Image();
