@@ -12,8 +12,10 @@
 <body>
     <header class="header index-header"><!-- 页眉区域，包含标题和签名 -->
         <div class="header-content index-header-content"><!-- 页眉的文字区域 -->
-            <h1 class="header-title">空</h1><!-- 页面内的标题 -->
-            <p class="subheader signature">— This address is outside the structure</p><!-- 页面内的签名 -->
+            <div class="header-text">
+                <h1 class="header-title">空</h1><!-- 页面内的标题 -->
+                <p class="subheader signature">— This address is outside the structure</p><!-- 页面内的签名 -->
+            </div>
             <div class="info-icon">
                 <img src="assets/images/info-icon-light.svg" alt="Info Icon" id="infoIcon">
             </div>
@@ -71,6 +73,7 @@
     <script src="javascripts/scrollHandler.js"></script>
     <script src="javascripts/infoToggle.js"></script>
     <script src="javascripts/main.js"></script>
+    <script src="javascripts/headerImage.js"></script>
     <script>
         document.getElementById("currentYear").textContent = new Date().getFullYear();
     </script>

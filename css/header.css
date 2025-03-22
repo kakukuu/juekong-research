@@ -15,7 +15,6 @@
 }
 
 .header.page-header {
-  height: 32vh;
   transition: height 0.5s ease; /* 平滑过渡动画 */
 }
 
@@ -25,8 +24,10 @@
 }
 
 .header-content {
+  display: flex;
+  align-items: flex-start; /* 确保图片和文本顶部对齐 */
   position: relative;
-  margin-left: 7vw; /* 让内容从页面右侧的 2.5% 开始 */
+  margin-left: 6.5vw; /* 让内容从页面右侧的 2.5% 开始 */
   z-index: 3;
 }
 
@@ -38,12 +39,40 @@
   margin-top: 0vh;
 }
 
+
+.header-img {
+  min-height: 10vh;
+  min-width: 10vw;
+  aspect-ratio: 1/1;
+  object-fit: cover; /* 图片填充 */
+  box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.5);
+  display: block;
+  overflow: hidden;
+}
+
+.header-img.enlarged {
+  min-height: 20vh;
+  min-width: 20vw;
+  transition: transform 0.3s ease;
+  cursor: zoom-out;     /* 光标切换 */
+}
+
+.header-text {
+  display: flex;
+  margin-left: 2vw;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 10vw; /* 不会被 info-icon 遮挡 */
+  overflow: hidden; /* 隐藏溢出文本 */
+  text-overflow: ellipsis; /* 溢出文本显示省略号 */
+
+}
+
 .header-title {
   font-family: 'ExtremeBoldSongti', serif;
   font-size: 48px;
   font-weight: 900;
   color: rgb(54, 54, 54);
-  padding-right: 10vw; /* 使标题不会被 info-icon 遮挡 */
   white-space: nowrap; /* 不换行 */
   overflow: hidden; /* 隐藏溢出文本 */
   text-overflow: ellipsis; /* 溢出文本显示省略号 */
@@ -54,8 +83,7 @@
   font-size: 20px;
   font-weight: bolder;
   color: #363636;
-  margin-bottom: 10vh;
-  padding-right: 10vw; /* 使副标题标题不会被 info-icon 遮挡 */
+  padding-bottom: 10px; /* 底部留白 */
 }
 
 .subheader.signature {
@@ -84,13 +112,14 @@
 
 .info-panel {
   position: sticky; /* 改为固定定位，始终显示在视口内 */
-  margin-bottom: 10vh;
+  margin-top: 4vh;
+  margin-bottom: 8vh;
   top: 18vh; /* 定位到页面顶部 a*/
   left: 0; /* 水平居中 */
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  width: 87%; /* 宽度为页面的95% */
+  width: 87%; /* 宽度为页面的87% */
   max-height: 0vh; /* 初始最大高度为0，用于动画 */
   min-height: 0vh;
   overflow-y: scroll; /* 增加垂直滚动条 */
@@ -104,7 +133,7 @@
 .info-panel.open {
   top: 18vh; /* 定位到页面顶部 */
   min-height: 30vh;
-  max-height: 30vh; /* 展开时的最大高度 */
+  max-height: 60vh; /* 展开时的最大高度 */
   -webkit-user-select: text; /* Chrome, Safari, Opera 禁止选中*/
   -moz-user-select: text;    /* Firefox 禁止选中*/
   -ms-user-select: text;     /* Internet Explorer/Edge 禁止选中*/

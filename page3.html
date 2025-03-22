@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <!-- 定义网页字符编码为 UTF-8，确保支持中文等多语言字符显示 -->
     
-    <title>support & service</title>
+    <title>experiment & project</title>
     <!-- 浏览器标签上显示的网页标题 -->
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +26,29 @@
     <!-- 页眉部分，没有信息面板 -->
     <header class="header page-header">
         <div class="header-content page-header-content">
-            <h1 class="header-title">experiment ＆ project</h1>
-            <!-- 页眉标题，显示在页面顶部 -->
-            <p class="subheader">
-                <a href="index.html">觉空</a> |
-                <!-- 页面导航链接，返回主页 -->
-            </p>
+            <div class="header-text">
+                <h1 class="header-title">experiment ＆ project</h1>
+                <!-- 页眉标题，显示在页面顶部 -->
+                <p class="subheader">
+                    
+                    
+                    <a href="index.html">觉空</a>
+                    <!-- 页面导航链接，返回主页 -->
+                    ▏
+                    <!-- ▏ (U+258F)：左八分之一块 -->
+                </p>
+            </div>
+        </div>
+        <div class="info-panel"></div>
+        <!--空的信息面板，保持排版 -->
+        <div class="keywords-background">
+            <div class="keywords">
+                <span style="font-size: 70px;">项目</span>
+                <span style="font-size: 50px;">工程</span>
+                <span style="font-size: 80px;">模板</span>
+                <span style="font-size: 60px;">OS</span>
+                <span style="font-size: 70px;">竞技模式</span>
+            </div>
         </div>
     </header>
 
@@ -97,5 +114,8 @@
     <!-- 外部引用：管理网页图标显示的脚本，使用 defer 优化加载顺序 -->
     <script src="javascripts/cardStack.js"></script>
     <!-- 外部引用：实现卡片堆叠效果的脚本，位于 javascripts 文件夹中 -->
+     
+    <script src="javascripts/headerImage.js"></script>
+    <!-- 外部引用：控制页眉图片显示的脚本，位于 javascripts 文件夹中 -->
 </body>
 </html>

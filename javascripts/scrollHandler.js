@@ -24,13 +24,13 @@ function handleScroll() {
   let maxFontSize; // 最大字体大小
   let minFontSize; // 最小字体大小
   if (window.innerWidth < 768) { 
-    // 如果窗口宽度小于 768 像素（小屏幕，如手机）
-    maxFontSize = 36; // 较小的最大字体大小
-    minFontSize = 18; // 较小的最小字体大小
+    // 小屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 18px
+    maxFontSize = Math.round(window.innerWidth * 0.05);
+    minFontSize = 18;
   } else {
-    // 如果窗口宽度大于或等于 768 像素（大屏幕，如电脑）
-    maxFontSize = 48; // 较大的最大字体大小
-    minFontSize = 24; // 较大的最小字体大小
+    // 大屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 24px
+    maxFontSize = Math.round(window.innerWidth * 0.05);
+    minFontSize = 24;
   }
 
   // 根据滚动距离计算新的字体大小

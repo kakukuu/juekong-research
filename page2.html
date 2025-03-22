@@ -27,14 +27,22 @@
     <!-- 页眉部分，没有信息面板 -->
     <header class="header page-header">
         <div class="header-content page-header-content">
-            <h1 class="header-title">support & service</h1>
-            <!-- 页眉标题，显示在页面顶部 -->
+            <div class="header-text">
+                <h1 class="header-title">support & service</h1>
+                <!-- 页眉标题，显示在页面顶部 -->
 
-            <p class="subheader">
-                <a href="index.html">觉空</a> |
-                <!-- 页面导航链接，返回主页 -->
-            </p>
+                <p class="subheader">
+                    
+                    <a href="index.html">觉空</a> 
+                    <!-- 页面导航链接，返回主页 -->
+                    ▏
+                    <!-- ▏ (U+258F)：左八分之一块 -->
+                </p>
+            </div>
         </div>
+        
+        <div class="info-panel"></div>
+        <!--空的信息面板，保持排版 -->
     </header>
 
     <!-- 主体内容 -->
@@ -135,6 +143,8 @@
     <script src="javascripts/favicon.js" defer></script>
     <!-- 外部引用：管理网页图标显示的脚本，使用 defer 优化加载顺序 -->
     <script src="javascripts/cardStack.js"></script>
-    <!-- 外部引用：实现卡片堆叠效果的脚本，位于 javascripts 文件夹中 -->
+    <!-- 外部引用：实现卡片堆叠效果的脚本，位于 javascripts 文件夹中 -->  
+    <script src="javascripts/headerImage.js"></script>
+    <!-- 外部引用：控制页眉图片显示的脚本，位于 javascripts 文件夹中 -->
 </body>
 </html>

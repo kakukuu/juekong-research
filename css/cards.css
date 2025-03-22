@@ -27,8 +27,10 @@
 }
 
 .card-container.lecture {
-  flex-direction: row; /* 调整卡片顺序为水平，按照反向排列 */
-  flex-wrap: wrap-reverse; /* 换行 */
+  flex-wrap: wrap-reverse; /* 换行时调换行数，形成下面多上面少的样式 */
+  flex-direction: row-reverse; /* 调整卡片顺序为水平，并且反序，让顺序可控
+  /*卡片顺序默认越靠后在浏览器的显示上就越靠前 */
+  /*卡片顺序也可靠下面的 #card，通过 order 属性控制*/
   gap: 20px; /* 设置卡片之间的间隙 */
   padding: 5vw;
 }
@@ -99,22 +101,40 @@
 
 
 #card-1 {
-  order: 1; /* 显示在第3顺位 */
+  order: 999; /* 显示在第1顺位 */
 }
 
 #card-2 {
-  order: 2; /* 显示在第1顺位 */
+  order: 998; /* 显示在第2顺位 */
 }
 
 #card-3 {
-  order: 3; /* 显示在第4顺位 */
+  order: 997; /* 显示在第3顺位 */
 }
 
 #card-4 {
-  order: 4; /* 显示在第2顺位 */
+  order: 996; /* 显示在第4顺位 */
 }
 
-/* for test */
+#card-5 {
+  order: 995; /* 显示在第5顺位 */
+}
+
+#card-6 {
+  order: 994; /* 显示在第6顺位 */
+}
+
+#card-7 {
+  order: 993; /* 显示在第7顺位 */
+}
+
+#card-8 {
+  order: 992; /* 显示在第8顺位 */
+}
+
+#card-9 {
+  order: 991; /* 显示在第9顺位 */
+}
 
 
 .card.lecture.stack {
