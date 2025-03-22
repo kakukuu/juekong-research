@@ -23,11 +23,17 @@ function handleScroll() {
   // 根据窗口宽度调整标题字体的最大值和最小值
   let maxFontSize; // 最大字体大小
   let minFontSize; // 最小字体大小
-  if (window.innerWidth < 768) { 
-    // 小屏幕时：例如最大字体比例为窗口宽度 7%，最小字体为 18px
+  if (window.innerWidth < 480) { 
+    // 小屏幕时：例如最大字体比例为窗口宽度 10%，最小字体为 16px
     maxFontSize = Math.round(window.innerWidth * 0.1);
-    minFontSize = 16;
-  } else {
+    minFontSize = 20;
+  } else
+  if (window.innerWidth < 768) {
+    // 中等屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 20px
+    maxFontSize = Math.round(window.innerWidth * 0.05);
+    minFontSize = 22;
+  }
+  else {
     // 大屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 24px
     maxFontSize = Math.round(window.innerWidth * 0.05);
     minFontSize = 24;
@@ -35,7 +41,7 @@ function handleScroll() {
 
   // 根据滚动距离计算新的字体大小
   // 字体大小会随着页面滚动逐渐减小，但不会小于 `minFontSize`
-  const newFontSize = Math.max(minFontSize, maxFontSize - scrollTop / 10);
+  const newFontSize = Math.max(minFontSize, maxFontSize - scrollTop / 2);
 
   // 将计算后的字体大小应用到标题元素
   headerTitle.style.fontSize = newFontSize + 'px';
