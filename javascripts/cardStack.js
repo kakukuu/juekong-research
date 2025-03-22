@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         expandCards();
         setTimeout(() => {
           adjustStackAlignContent(stack);
-        }, 200); // 延迟100 毫秒执行
+        }, 400); // 延迟100 毫秒执行
       } else {
         collapseCards();
       }
