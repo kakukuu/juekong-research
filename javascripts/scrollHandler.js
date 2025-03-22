@@ -24,9 +24,9 @@ function handleScroll() {
   let maxFontSize; // 最大字体大小
   let minFontSize; // 最小字体大小
   if (window.innerWidth < 768) { 
-    // 小屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 18px
-    maxFontSize = Math.round(window.innerWidth * 0.05);
-    minFontSize = 18;
+    // 小屏幕时：例如最大字体比例为窗口宽度 7%，最小字体为 18px
+    maxFontSize = Math.round(window.innerWidth * 0.1);
+    minFontSize = 16;
   } else {
     // 大屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 24px
     maxFontSize = Math.round(window.innerWidth * 0.05);

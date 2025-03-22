@@ -59,7 +59,7 @@
 
 .header-text {
   display: flex;
-  margin-left: 2vw;
+  margin-left: 4vw;
   flex-direction: column;
   justify-content: flex-start;
   margin-right: 10vw; /* 不会被 info-icon 遮挡 */
@@ -133,7 +133,7 @@
 .info-panel.open {
   top: 18vh; /* 定位到页面顶部 */
   min-height: 30vh;
-  max-height: 60vh; /* 展开时的最大高度 */
+  max-height: 50vh; /* 展开时的最大高度 */
   -webkit-user-select: text; /* Chrome, Safari, Opera 禁止选中*/
   -moz-user-select: text;    /* Firefox 禁止选中*/
   -ms-user-select: text;     /* Internet Explorer/Edge 禁止选中*/
