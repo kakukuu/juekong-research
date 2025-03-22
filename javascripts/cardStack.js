@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 辅助函数：根据stack内容实际高度设置align-content
   function adjustStackAlignContent(stack) {
-    if (stack.scrollHeight > window.innerHeight) { // 当stack内容高度超出浏览器视口高度
+    if (stackheight > window.innerHeight) { // 当stack内容高度超出浏览器视口高度
       stack.style.alignContent = 'flex-start';
     } else {
       stack.style.alignContent = 'center';
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         expandCards();
         setTimeout(() => {
           adjustStackAlignContent(stack);
-        }, 400); // 延迟100 毫秒执行
+        }, 200); // 延迟100 毫秒执行
       } else {
         collapseCards();
       }
