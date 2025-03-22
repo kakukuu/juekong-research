@@ -48,6 +48,7 @@
   box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.5);
   display: block;
   overflow: hidden;
+  margin-right: 3vw;
 }
 
 .header-img.enlarged {
@@ -55,11 +56,11 @@
   min-width: 20vw;
   transition: transform 0.3s ease;
   cursor: zoom-out;     /* 光标切换 */
+  margin-right: 4vw;
 }
 
 .header-text {
   display: flex;
-  margin-left: 4vw;
   flex-direction: column;
   justify-content: flex-start;
   margin-right: 10vw; /* 不会被 info-icon 遮挡 */
@@ -70,12 +71,13 @@
 
 .header-title {
   font-family: 'ExtremeBoldSongti', serif;
-  font-size: 48px;
+  font-size: min(5vw, 5vh);
   font-weight: 900;
   color: rgb(54, 54, 54);
   white-space: nowrap; /* 不换行 */
   overflow: hidden; /* 隐藏溢出文本 */
   text-overflow: ellipsis; /* 溢出文本显示省略号 */
+  transition: font-size 1s ease; /* 平滑过渡动画 */
 }
 
 .subheader {

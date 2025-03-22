@@ -16,7 +16,8 @@ function handleScroll() {
 
   // 获取页面中的特定 HTML 元素
   const header = document.querySelector('.header'); // 页面顶部的页眉
-  const headerTitle = document.querySelector('.header-title'); // 页眉中的标题
+  const headerTitlePage = document.querySelector('.page-header-content .header-title'); // 页眉中的标题
+  const headerTitleIndex = document.querySelector('.index-header-content .header-title'); // 页眉中的标题
   const mainContent = document.querySelector('.main-content'); // 主内容区域
 
   // 设置动态字体大小
@@ -25,25 +26,30 @@ function handleScroll() {
   let minFontSize; // 最小字体大小
   if (window.innerWidth < 480) { 
     // 小屏幕时：例如最大字体比例为窗口宽度 10%，最小字体为 16px
-    maxFontSize = Math.round(window.innerWidth * 0.1);
+    
+    maxFontSize = Math.round(Math.min(window.innerWidth * 0.1, window.innerHeight * 0.1));
     minFontSize = 20;
   } else
   if (window.innerWidth < 768) {
     // 中等屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 20px
-    maxFontSize = Math.round(window.innerWidth * 0.05);
+  maxFontSize = Math.round(Math.min(window.innerWidth * 0.05, window.innerHeight * 0.05));
     minFontSize = 22;
   }
   else {
     // 大屏幕时：例如最大字体比例为窗口宽度 5%，最小字体为 24px
-    maxFontSize = Math.round(window.innerWidth * 0.05);
+  maxFontSize = Math.round(Math.min(window.innerWidth * 0.05, window.innerHeight * 0.05));
     minFontSize = 24;
   }
 
   // 根据滚动距离计算新的字体大小
   // 字体大小会随着页面滚动逐渐减小，但不会小于 `minFontSize`
-  const newFontSize = Math.max(minFontSize, maxFontSize - scrollTop / 2);
-
+  const newFontSize = Math.max(minFontSize, maxFontSize - scrollTop);
+  const newFontSizeSlow = Math.max(minFontSize, maxFontSize - scrollTop/30);
   // 将计算后的字体大小应用到标题元素
-  headerTitle.style.fontSize = newFontSize + 'px';
-
+  if (headerTitlePage) {
+    headerTitlePage.style.fontSize = newFontSize + 'px';
+  }
+  if (headerTitleIndex) {
+    headerTitleIndex.style.fontSize = newFontSizeSlow + 'px';
+  }
 }

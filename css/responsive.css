@@ -3,16 +3,9 @@
 
 /* 小屏幕下的样式 */
 @media screen and (max-width: 768px) {
-  .header-title {
-      font-size: 36px;
-  }
 
-  .header-content {
-    margin-left: 3vw;
-  }
-
-  .header-text {
-    margin-left: 3vw;
+  .header-img {
+    margin-right: 3vw;
   }
 
   .header-signature {
@@ -46,16 +39,15 @@
 /* 超小屏幕下的样式 */
 @media screen and (max-width: 480px) {
   .header-title {
-      font-size: 24px;
+    font-size: min(10vw, 10vh);
   }
-
   
   .header-content {
     margin-left: 1.5vw;
   }
 
-  .header-text {
-    margin-left: 3vw;
+  .header-img {
+    margin-right: 3vw;
   }
   
   .header-signature {
