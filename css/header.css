@@ -101,7 +101,7 @@
 .info-icon {
   position: absolute;
   opacity: 80%;
-  top: 8px;
+  top: min(3vh, 3vw); /* 保持在页面顶部 */
   right: 7vw;
   cursor: pointer;
   transition: background-image 0.3s ease; /* 平滑过渡 */
