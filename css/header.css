@@ -41,9 +41,9 @@
 
 
 .header-img {
-  min-height: 10vh;
-  min-width: 10vw;
+  width: 10vw;
   aspect-ratio: 1/1;
+  height: auto; /* 让aspect-ratio生效 */
   object-fit: cover; /* 图片填充 */
   box-shadow: 0 -1px 2px rgba(165, 165, 165, 0.5);
   display: block;
@@ -52,8 +52,7 @@
 }
 
 .header-img.enlarged {
-  min-height: 20vh;
-  min-width: 20vw;
+  width: 20vw;
   transition: transform 0.3s ease;
   cursor: zoom-out;     /* 光标切换 */
   margin-right: 4vw;
@@ -114,8 +113,8 @@
 
 .info-panel {
   position: sticky; /* 改为固定定位，始终显示在视口内 */
-  margin-top: 4vh;
-  margin-bottom: 8vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   top: 18vh; /* 定位到页面顶部 a*/
   left: 0; /* 水平居中 */
   right: 0;
@@ -136,6 +135,7 @@
   top: 18vh; /* 定位到页面顶部 */
   min-height: 30vh;
   max-height: 50vh; /* 展开时的最大高度 */
+  margin-bottom: 6vh;
   -webkit-user-select: text; /* Chrome, Safari, Opera 禁止选中*/
   -moz-user-select: text;    /* Firefox 禁止选中*/
   -ms-user-select: text;     /* Internet Explorer/Edge 禁止选中*/

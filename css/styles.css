@@ -34,10 +34,12 @@ Keywords: 2;*/
 body {
     font-family: 'RegularHeiti', sans-serif;
     /*background-image: url('../assets/images/background.jpg'); */
+    background-image:
+        linear-gradient(rgba(240,240,240,0.7), rgba(240,240,240,0.7)), /* 蒙版层 */
+        url(../assets/images/paper-structure.png);                      /* 图片层 */
     background-color: #f0f0f0;
-    background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-attachment: fixed;
     overflow-x: hidden; /* 禁止横向滚动 */
     -webkit-user-select: none; /* Chrome, Safari, Opera 禁止选中*/
     -moz-user-select: none;    /* Firefox 禁止选中*/
