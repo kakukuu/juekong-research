@@ -42,6 +42,7 @@
 
 .header-img {
   width: 10vw;
+  min-width: 12vh;
   aspect-ratio: 1/1;
   height: auto; /* 让aspect-ratio生效 */
   object-fit: cover; /* 图片填充 */
@@ -53,6 +54,7 @@
 
 .header-img.enlarged {
   width: 20vw;
+  min-width: 22vh;
   transition: transform 0.3s ease;
   cursor: zoom-out;     /* 光标切换 */
   margin-right: 4vw;
