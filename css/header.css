@@ -67,7 +67,7 @@
   margin-right: 10vw; /* 不会被 info-icon 遮挡 */
   overflow: hidden; /* 隐藏溢出文本 */
   text-overflow: ellipsis; /* 溢出文本显示省略号 */
-
+  letter-spacing: 0.25em; /* 设置全局字间距 */
 }
 
 .header-title {
